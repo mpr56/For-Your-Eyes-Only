@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>For Your Eyes Only</title>
+  <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+<link rel="icon" href="assets/img/f.png">
+ <style>
+    .textcontainer {
+      position: relative;
+      padding-left: 30%;
+		padding-top: 5%;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 25%;
+    }
+
+    .fade-image {
+		padding-top: 8%;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+      z-index: 1;
+    }
+
+    .fade-image.active {
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body class="scrolling">
+  <div class="perspective effect-rotate-left">
+    <div class="container">
+      <div class="outer-nav--return"></div>
+      <div id="viewport" class="l-viewport">
+        <div class="l-wrapper">
+          <header class="header">
+            <a class="header--logo" href="index.html">
+              <p style="font-size: 200%; color: #fff6ef;">fyeo 36221666</p>
+            </a>
+            <div class="header--nav-toggle">
+              <span></span>
+            </div>
+          </header>
+          <ul class="l-main-content main-content">
+            <li class="l-section section section--is-active">
+              <div class="o-intro">
+                <div class="contact">
+                  <h1>The Photographer</h1>
+                  <div class="img-container">
+                        <img src="https://i.imgur.com/D74adgI.jpg" alt="Image 1" class="fade-image" width="25%">
+    					<img src="https://i.imgur.com/cSTjcIv.jpg" alt="Image 2" class="fade-image" width="25%">
+						<img src="https://i.imgur.com/8hqzsrb.jpg" alt="Image 3" class="fade-image" width="25%">
+						<img src="https://i.imgur.com/HoLCjpj.jpg" alt="Image 4" class="fade-image" width="25%">
+                    <div class="textcontainer">
+                      <p>
+                        Meet The Protagonist, a passionate photographer with an unwavering curiosity for the intricacies of human life. With an artist's eye and a heart that beats for storytelling, The Protagonist is drawn to capturing people in their daily busy lives. Through their lens, they immortalize the fleeting moments that encapsulate the essence of human existence.<br><br>
+
+                        The Protagonist finds inspiration in the beauty of ordinary moments, believing that within the hustle and bustle of everyday life, there lies a tapestry of emotions, connections, and untold stories. They roam the streets, seeking authenticity in the candid expressions, gestures, and interactions that unfold before them.<br><br>
+
+                        Patient and observant, The Protagonist possesses a unique ability to blend into the background, allowing their subjects to forget the presence of the camera. This enables them to capture the rawness and vulnerability that surfaces when individuals are engrossed in their own worlds.<br><br>
+
+                        With each click of the shutter, The Protagonist strives to freeze time and preserve the soulful narratives woven into the fabric of daily routines. They seek to remind us that amidst the chaos, there is beauty in the ordinary, and poetry in the mundane.<br><br>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  <ul class="outer-nav">
+  <a class="a-c" href="index.html"><li><h1>Title Page</h1></li></a>
+	   <a class="a-c" href="overview.html"><li><h1>The Vision</h1></li></a>
+	   <a class="a-c" href="video.html"><li><h1>The Product</h1></li></a>
+   <a class="a-c" href="port.html"><li><h1>The Portfolio</h1></li></a>
+  </ul>
+  </div>
+
+
+	 <script>
+    const fadeImages = document.querySelectorAll('.fade-image');
+
+    let currentIndex = 0;
+    fadeImages[currentIndex].classList.add('active');
+
+    setInterval(() => {
+      fadeImages[currentIndex].classList.remove('active');
+      currentIndex = (currentIndex + 1) % fadeImages.length;
+      fadeImages[currentIndex].classList.add('active');
+    }, 3000);
+  </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
+<script src="assets/js/functions-min.js"></script>
+</body>
+</html>
+

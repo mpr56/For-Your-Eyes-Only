@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>For Your Eyes Only</title>
+  <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+<link rel="icon" href="assets/img/f.png">
+ <style>
+    .textcontainer {
+      position: relative;
+      padding-left: 30%;
+		padding-top: 5%;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 25%;
+    }
+
+    .fade-image {
+		padding-top: 8%;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+      z-index: 1;
+    }
+
+    .fade-image.active {
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body class="scrolling">
+  <div class="perspective effect-rotate-left">
+    <div class="container">
+      <div class="outer-nav--return"></div>
+      <div id="viewport" class="l-viewport">
+        <div class="l-wrapper">
+          <header class="header">
+            <a class="header--logo" href="index.html">
+              <p style="font-size: 200%; color: #fff6ef;">fyeo 36221666</p>
+            </a>
+            <div class="header--nav-toggle">
+              <span></span>
+            </div>
+          </header>
+          <ul class="l-main-content main-content">
+            <li class="l-section section section--is-active">
+              <div class="o-intro">
+                <div class="contact">
+                  <h1>The Victim</h1>
+                  <div class="img-container">
+                        <img src="https://i.imgur.com/R73HEoc.jpg" alt="Image 1" class="fade-image" width="25%">
+    					<img src="https://i.imgur.com/zaPtCXq.jpg" alt="Image 2" class="fade-image" width="25%">
+						<img src="https://i.imgur.com/fLqo6rP.jpg" alt="Image 3" class="fade-image" width="25%">
+						<img src="https://i.imgur.com/mYyA6g4.jpg" alt="Image 4" class="fade-image" width="25%">
+					  	<img src="https://i.imgur.com/sOot7QH.jpg" alt="Image 5" class="fade-image" width="25%">
+                    <div class="textcontainer">
+                      <p>
+                        Not much is known about them but it seems the photographer sees something intriguing about them.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  <ul class="outer-nav">
+  <a class="a-c" href="index.html"><li><h1>Title Page</h1></li></a>
+	   <a class="a-c" href="overview.html"><li><h1>The Vision</h1></li></a>
+	   <a class="a-c" href="video.html"><li><h1>The Product</h1></li></a>
+   <a class="a-c" href="port.html"><li><h1>The Portfolio</h1></li></a>
+  </ul>
+  </div>
+
+
+	 <script>
+    const fadeImages = document.querySelectorAll('.fade-image');
+
+    let currentIndex = 0;
+    fadeImages[currentIndex].classList.add('active');
+
+    setInterval(() => {
+      fadeImages[currentIndex].classList.remove('active');
+      currentIndex = (currentIndex + 1) % fadeImages.length;
+      fadeImages[currentIndex].classList.add('active');
+    }, 3000);
+  </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
+<script src="assets/js/functions-min.js"></script>
+</body>
+</html>
+
